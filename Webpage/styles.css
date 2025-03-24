@@ -1495,9 +1495,142 @@ body {
   width: 170px;
 }
 
-
 .service-btn {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Us Floating Button */
+.floating-contact-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #ff5f6d, #ffc371);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.floating-contact-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar Contact Form */
+.contact-sidebar-container {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 320px;
+  height: 100vh;
+  background: white;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s ease-in-out;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.contact-close-btn {
+  font-size: 22px;
+  cursor: pointer;
+  color: #ff5f6d;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-close-btn:hover {
+  color: #d9414e;
+}
+
+.contact-sidebar-container input,
+.contact-sidebar-container select,
+.contact-sidebar-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-sidebar-container button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #ff5f6d, #ffc371);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.contact-sidebar-container button:hover {
+  background: linear-gradient(45deg, #d9414e, #e8a05c);
+}
+
+/* Captcha Box */
+.captcha-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.captcha-box span {
+  font-weight: bold;
+  font-size: 16px;
+  background: #f3f3f3;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.captcha-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
 }

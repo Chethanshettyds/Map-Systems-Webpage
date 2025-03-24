@@ -235,6 +235,78 @@
         </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contact Us Button -->
+<button id="uniqueContactBtn" class="floating-contact-btn">Contact Us</button>
+
+<!-- Sidebar Contact Form -->
+<div id="uniqueContactSidebar" class="contact-sidebar-container">
+    <div class="contact-sidebar-header">
+        <h3>Contact Us</h3>
+        <span class="contact-close-btn" onclick="toggleUniqueSidebar()">✖</span>
+    </div>
+    
+    <!-- Updated Form -->
+    <form id="uniqueContactForm" action="contact.php" method="POST" onsubmit="return validateUniqueForm()">
+        <input type="text" name="uniqueName" id="uniqueName" placeholder="Full Name" required>
+        <input type="email" name="uniqueEmail" id="uniqueEmail" placeholder="Email Address" required>
+        <input type="tel" name="uniquePhone" id="uniquePhone" placeholder="Phone Number" required>
+        
+        <select name="uniqueCountry" id="uniqueCountry" required>
+            <option value="">Select Country</option>
+            <option value="USA">United States</option>
+            <option value="India">India</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+        </select>
+
+        <textarea name="uniqueMessage" id="uniqueMessage" placeholder="Your Message" required></textarea>
+
+        <!-- Captcha -->
+        <div class="captcha-box">
+            <span id="uniqueCaptchaCode"></span>
+            <input type="text" id="uniqueCaptchaInput" placeholder="Enter Captcha" required>
+            <button type="button" onclick="generateUniqueCaptcha()">🔄</button>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer class="footer">
         <div class="footer-container">
             <!-- Left Section: Company Info -->

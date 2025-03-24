@@ -226,3 +226,82 @@ document.addEventListener("DOMContentLoaded", function () {
     // Initialize first feedback display
     updateFeedback(currentIndex);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Toggle Sidebar
+function toggleUniqueSidebar() {
+    let sidebar = document.getElementById("uniqueContactSidebar");
+    sidebar.style.right = sidebar.style.right === "0px" ? "-350px" : "0px";
+}
+
+// Generate Captcha
+function generateUniqueCaptcha() {
+    let captcha = Math.random().toString(36).substring(2, 8).toUpperCase();
+    document.getElementById("uniqueCaptchaCode").textContent = captcha;
+}
+generateUniqueCaptcha(); // Generate on load
+
+// Validate Form
+function validateUniqueForm() {
+    let captchaInput = document.getElementById("uniqueCaptchaInput").value;
+    let captchaCode = document.getElementById("uniqueCaptchaCode").textContent;
+
+    if (captchaInput !== captchaCode) {
+        alert("Captcha is incorrect. Please try again.");
+        generateUniqueCaptcha(); // Reset captcha
+        return false;
+    }
+    return true;
+}
+
+// Attach Click Event to Floating Button
+document.getElementById("uniqueContactBtn").addEventListener("click", toggleUniqueSidebar);
+
+
+
+
+
+
+
+
+
+// Generate Captcha Code
+function generateUniqueCaptcha() {
+    let captcha = Math.random().toString(36).substring(2, 8).toUpperCase();
+    document.getElementById("uniqueCaptchaCode").innerText = captcha;
+    sessionStorage.setItem("captchaCode", captcha);
+}
+
+// Validate Captcha Before Submitting
+function validateUniqueForm() {
+    let enteredCaptcha = document.getElementById("uniqueCaptchaInput").value;
+    let generatedCaptcha = sessionStorage.getItem("captchaCode");
+
+    if (enteredCaptcha !== generatedCaptcha) {
+        alert("Incorrect Captcha. Please try again.");
+        return false;
+    }
+
+    return true;
+}
+
+// Generate Captcha on Page Load
+window.onload = generateUniqueCaptcha;
